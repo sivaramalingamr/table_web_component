@@ -1,0 +1,33 @@
+<div class="container">
+    <div class="row">
+        <h1>Scroll event Implementation</h1>
+        <ng-container *ngIf="dataSource && dataSource.length> 0 else noFound">
+            <div #tableScroll class="table-container" (scroll)="onScroll($event)">
+                <table class="table table-bordered">
+                    <tr>
+                        <th>S.No</th>
+                        <ng-container *ngFor="let i of headerKey">
+                            <th>{{i}}</th>
+                        </ng-container>
+                    </tr>
+                    <tr *ngFor="let i of tableData; let in=index">
+                        <td>{{in + 1}}</td>
+                        <td *ngFor="let key of headerKey">
+                            {{i[key]}}
+                        </td>
+                    </tr>
+                    <ng-container *ngIf="isDataLoad">
+                        <tr>
+                            <td [attr.colspan]="headerKey.length + 1">
+                                <!-- <app-loader></app-loader> -->
+                            </td>
+                        </tr>
+                    </ng-container>
+                </table>
+            </div>
+        </ng-container>
+        <ng-template #noFound>
+            <p class="err-msg">{{noDataFoundMsg}}</p>
+        </ng-template>
+    </div>
+</div>
