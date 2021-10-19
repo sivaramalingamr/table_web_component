@@ -2,7 +2,7 @@
     <div class="sl-row">
         <h1>Scroll event Implementation</h1>
         <ng-container *ngIf="dataSource && dataSource.length> 0 else noFound">
-            <div #tableScroll class="sl-table-container" (scroll)="onScroll($event)">
+            <div #ngxTableScroll class="sl-table-container" (scroll)="onScroll($event)">
                 <table class="sl-table sl-table-bordered">
                     <tr>
                         <th>S.No</th>

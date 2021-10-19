@@ -16,7 +16,7 @@ import { createCustomElement } from '@angular/elements';
 export class AppModule {
   constructor(injector: Injector) {
     const table = createCustomElement(TableAppComponent, { injector })
-    customElements.define('app-table', table);
+    customElements.define('ngx-scroll-table', table);
   }
   ngDoBootstrap() { }
 }

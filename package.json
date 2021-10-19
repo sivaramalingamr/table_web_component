@@ -5,7 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build --prod --output-hashing=none",
-    "package": "type dist\\tableApp\\*.js > D:\\sivaramalingam\\angular-app\\angular-app\\src\\assets\\js\\table.js",
+    "package": "type dist\\tableApp\\*.js > src\\assets\\js\\ngx-scroll-table.js",
     "serve": "http-server --gzip",
     "test": "ng test",
     "lint": "ng lint",
